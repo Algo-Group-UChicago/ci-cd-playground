@@ -8,7 +8,10 @@ on:
 
 jobs:
   build-wheel:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout repository
@@ -31,6 +34,6 @@ jobs:
       - name: Upload wheel artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ci-cd-playground-wheel
+          name: ci-cd-playground-wheel-${{ matrix.os }}
           path: dist/*.whl
 
