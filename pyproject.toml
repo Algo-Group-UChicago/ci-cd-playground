@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ci-cd-playground"
+version = "0.1.0"
+description = "Simple calculator and exchange rate examples for CI/CD practice."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+  { name = "Algo Group Example", email = "devnull@example.com" },
+]
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "requests>=2.31,<3.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=7.4,<8.0",
+  "responses>=0.25,<1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/ci-cd-playground"
+Source = "https://github.com/your-org/ci-cd-playground"
+
+[tool.setuptools]
+packages = ["calculator", "exchange_rate"]
+

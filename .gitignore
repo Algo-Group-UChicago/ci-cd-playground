@@ -9,6 +9,15 @@ venv/
 ENV/
 .venv
 
+# Build / Distribution
+build/
+dist/
+*.egg
+*.egg-info/
+*.whl
+*.manifest
+*.spec
+
 # Testing
 .pytest_cache/
 .coverage
