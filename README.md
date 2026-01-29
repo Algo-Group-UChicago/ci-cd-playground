@@ -20,3 +20,5 @@ pytest test_calculator.py -v
 2. **Modify Workflows**: Edit `.github/workflows/ci.yml` to add new steps
 3. **Add Linting**: Add a linting step to the CI workflow
 4. **Add Docker**: Create a Dockerfile and add a build step
+
+CHANGED README
