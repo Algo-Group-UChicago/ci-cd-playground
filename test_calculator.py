@@ -4,7 +4,7 @@ Some tests may be incomplete or broken - fix them!
 """
 
 import pytest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, power
 
 
 def test_add():
@@ -31,3 +31,10 @@ def test_divide():
     assert divide(10, 2) == 5
     # TODO: Add test for division by zero
     # TODO: Add more test cases
+
+
+def test_power():
+    """Test power function."""
+    assert power(2, 2) == 4
+    assert power(2, 3) == 8
+
