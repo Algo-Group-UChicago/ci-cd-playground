@@ -25,3 +25,8 @@ def divide(a, b):
         raise ValueError("Cannot divide by zero")
     return a / b
 
+
+def power(a, b):
+    """Power a and b."""
+    return a ** b
+
