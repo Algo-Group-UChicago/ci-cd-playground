@@ -4,7 +4,7 @@ Some tests may be incomplete or broken - fix them!
 """
 
 import pytest
-from calculator import add, subtract, multiply, divide
+from calculator import add, subtract, multiply, divide, modulo
 
 
 def test_add():
@@ -31,3 +31,18 @@ def test_divide():
     assert divide(10, 2) == 5
     # TODO: Add test for division by zero
     # TODO: Add more test cases
+
+
+def test_modulo():
+    """Test modulo function."""
+    assert modulo(10, 3) == 1
+    assert modulo(10, 2) == 0
+    assert modulo(7, 4) == 3
+    assert modulo(-10, 3) == 2
+    assert modulo(0, 5) == 0
+
+
+def test_modulo_by_zero():
+    """Test modulo by zero raises an error."""
+    with pytest.raises(ZeroDivisionError):
+        modulo(10, 0)
